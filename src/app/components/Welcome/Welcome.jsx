@@ -5,9 +5,10 @@ function Welcome() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    fetch('/api/hello')
+    fetch('/api/hellos')
       .then((response) => response.json())
-      .then((data) => setMessage(data.message));
+      .then((data) => setMessage(data.message))
+      .catch((_error) => setMessage('Hello API not accessible!'));
   }, []);
 
   return <p className={classes.message}>{message}</p>;

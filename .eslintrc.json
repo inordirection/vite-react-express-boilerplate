@@ -15,7 +15,9 @@
     }
   },
   "plugins": ["react-hooks"],
-  "rules": {},
+  "rules": {
+    "no-unused-vars": ["error", { "args": "all", "argsIgnorePattern": "^_" }]
+  },
   "settings": {
     "react": {
       "version": "17.0"

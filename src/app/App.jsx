@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import styles from './App.module.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Welcome from './components/Welcome/Welcome';
+import Counter from './components/Counter/Counter';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,9 +15,10 @@ function App() {
           <img src={logo} className={styles['App-logo']} alt="logo" />
           <Welcome />
           <p>
-            <button onClick={() => setCount((count) => count + 1)}>
-              count is: {count}
-            </button>
+            <Counter
+              onClick={() => setCount((count) => count + 1)}
+              count={count}
+            />
           </p>
           <p>
             Edit <code>App.jsx</code> and save to test HMR updates.
