@@ -22,7 +22,6 @@
   "plugins": ["react", "react-hooks"],
   "rules": {
     "no-unused-vars": ["error", { "args": "all", "argsIgnorePattern": "^_" }]
-    //"react/prop-types": "off"
   },
   "settings": {
     "react": {
