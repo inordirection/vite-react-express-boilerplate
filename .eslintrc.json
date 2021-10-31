@@ -4,7 +4,12 @@
     "es2021": true,
     "node": true
   },
-  "extends": ["eslint:recommended", "prettier", "plugin:react/recommended"],
+  "extends": [
+    "eslint:recommended",
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
   "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaVersion": 12,
@@ -14,13 +19,14 @@
       "presets": ["@babel/preset-react"]
     }
   },
-  "plugins": ["react-hooks"],
+  "plugins": ["react", "react-hooks"],
   "rules": {
-    "no-unused-vars": ["error", { "args": "all", "argsIgnorePattern": "^_" }]
+    "no-unused-vars": ["error", { "args": "all", "argsIgnorePattern": "^_" }],
+    "react/prop-types": "off"
   },
   "settings": {
     "react": {
-      "version": "17.0"
+      "version": "detect"
     }
   }
 }
