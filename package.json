@@ -6,13 +6,13 @@
     "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
     "client:dev": "vite",
     "server:dev": "nodemon src/server",
-    "server:build": "babel --verbose --out-dir dist src/server",
+    "server:build": "babel --verbose --out-dir dist --only 'src/server' src",
     "client:build": "vite build",
     "build": "npm run server:build && npm run client:build",
     "serve": "vite preview",
     "prepare": "husky install",
     "test": "prettier --check . && eslint . && stylelint \"**/*.css\"",
-    "start": "node dist"
+    "start": "node dist/server"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.7",
