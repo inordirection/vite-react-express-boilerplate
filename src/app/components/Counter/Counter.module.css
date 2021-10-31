@@ -6,3 +6,10 @@
   border-radius: 0.4em;
   text-transform: uppercase;
 }
+
+.counter:hover {
+  filter: brightness(75%) saturate(120%);
+}
+.counter:active {
+  transform: scale(0.99);
+}
